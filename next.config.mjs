@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // This creates the 'out' folder GitHub is looking for
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Prevents build from stopping due to tiny code warnings
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // Prevents build from stopping due to type errors
+    ignoreBuildErrors: true,
   },
 }
 
