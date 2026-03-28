@@ -1,15 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-}
+  output: 'export', // REQUIRED for GitHub Pages
 
-export default nextConfig
+  images: {
+    unoptimized: true, // REQUIRED for static export
+  },
+
+  eslint: {
+    ignoreDuringBuilds: true, // prevents build fail
+  },
+
+  typescript: {
+    ignoreBuildErrors: true, // prevents TS blocking deploy
+  },
+
+  trailingSlash: true, // IMPORTANT for GitHub Pages routing
+};
+
+export default nextConfig;
